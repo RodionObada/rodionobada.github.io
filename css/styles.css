@@ -157,8 +157,7 @@ h2 {
   top: 0;
   left: 0;
   z-index: -10;
-  min-height: 100%;
-  min-width: 100%;
+  height: 100%;
 }
 
 .hero__info {
@@ -293,6 +292,10 @@ h2 {
   display: block;
 }
 
+.preview__link {
+  align-items: center;
+}
+
 .preview__desc {
   display: block;
   font-size: 13.5px;
@@ -343,6 +346,7 @@ h2 {
 
   .hero {
     max-width: 100%;
+    padding-left: 20px;
   }
 
   .slider__item img {
@@ -352,8 +356,8 @@ h2 {
   .preview {
     width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    margin-top: 40px;
   }
 
   .preview__desc-wrapper, .preview__link {
@@ -363,6 +367,19 @@ h2 {
   .preview__price, .preview__title {
     margin-right: 40px;
   }
+  
+  .preview__desc {
+    max-width: 275px;
+  }
+
+  .preview__img {
+    max-width: 40%;
+  }
+
+  .video {
+    min-width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 678px) {
@@ -371,7 +388,61 @@ h2 {
     min-height: 100%;
   }
   .hero__info {
+    min-width: 650px;
     padding-top: 40px;
     padding-bottom: 50px;
+  }
+
+  .preview__img {
+    max-width: 100%;
+  }
+
+  .preview {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .h--1 {
+    font-size: 25px;
+  }
+
+  .hero__subtitle {
+    font-size: 12px;
+  }
+  .hero__info {
+    min-width: 550px;
+  }
+  .preview {
+    margin-top: 0;
+    padding: 0 20px;
+  }
+  .preview__title {
+    font-size: 17px;
+  }
+
+  .preview__img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .preview__price, .preview__title {
+    margin-right: 0;
+  }
+
+  .preview__desc {
+    font-size: 18px;
+    margin: 25px 0;
+    max-width: 100%;
+  }
+
+  .preview__sctrong {
+    margin-right: 0;
+    font-size: 14px;
+  }
+
+  .preview__price {
+    font-size: 11px;
+    font-weight: 600;
   }
 }
